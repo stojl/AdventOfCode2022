@@ -1,0 +1,1434 @@
+
+;; Function main (main, funcdef_no=6, decl_uid=2906, cgraph_uid=7, symbol_order=6)
+
+int main ()
+{
+  char draw;
+  char win;
+  int s;
+  char buff[4];
+  struct FILE * f;
+  int D.2927;
+  char _1;
+  int _2;
+  char _3;
+  char _4;
+  char * _5;
+  int _22;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  f_15 = fopen ("input.txt", "r");
+  s_16 = 0;
+  goto <bb 14>; [INV]
+;;    succ:       14
+
+;;   basic block 3, loop depth 1
+;;    pred:       14
+  _1 = buff[2];
+  _2 = (int) _1;
+  if (_2 == 90)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 4>; [INV]
+;;    succ:       4
+;;                9
+
+;;   basic block 4, loop depth 1
+;;    pred:       3
+  if (_2 > 90)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 5>; [INV]
+;;    succ:       5
+;;                10
+
+;;   basic block 5, loop depth 1
+;;    pred:       4
+  if (_2 == 88)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 6>; [INV]
+;;    succ:       6
+;;                7
+
+;;   basic block 6, loop depth 1
+;;    pred:       5
+  if (_2 == 89)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 10>; [INV]
+;;    succ:       10
+;;                8
+
+;;   basic block 7, loop depth 1
+;;    pred:       5
+  win_30 = 67;
+  draw_31 = 65;
+  s_32 = s_7 + 1;
+  goto <bb 10>; [INV]
+;;    succ:       10
+
+;;   basic block 8, loop depth 1
+;;    pred:       6
+  win_27 = 65;
+  draw_28 = 66;
+  s_29 = s_7 + 2;
+  goto <bb 10>; [INV]
+;;    succ:       10
+
+;;   basic block 9, loop depth 1
+;;    pred:       3
+  win_24 = 66;
+  draw_25 = 67;
+  s_26 = s_7 + 3;
+;;    succ:       10
+
+;;   basic block 10, loop depth 1
+;;    pred:       6
+;;                7
+;;                8
+;;                9
+;;                4
+  # s_6 = PHI <s_7(6), s_32(7), s_29(8), s_26(9), s_7(4)>
+  # win_8 = PHI <win_9(6), win_30(7), win_27(8), win_24(9), win_9(4)>
+  # draw_10 = PHI <draw_11(6), draw_31(7), draw_28(8), draw_25(9), draw_11(4)>
+  _3 = buff[0];
+  if (win_8 == _3)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 12>; [INV]
+;;    succ:       11
+;;                12
+
+;;   basic block 11, loop depth 1
+;;    pred:       10
+  s_34 = s_6 + 6;
+  goto <bb 14>; [INV]
+;;    succ:       14
+
+;;   basic block 12, loop depth 1
+;;    pred:       10
+  _4 = buff[0];
+  if (draw_10 == _4)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 14>; [INV]
+;;    succ:       13
+;;                14
+
+;;   basic block 13, loop depth 1
+;;    pred:       12
+  s_33 = s_6 + 3;
+;;    succ:       14
+
+;;   basic block 14, loop depth 1
+;;    pred:       2
+;;                11
+;;                12
+;;                13
+  # s_7 = PHI <s_16(2), s_34(11), s_6(12), s_33(13)>
+  # win_9 = PHI <win_17(D)(2), win_8(11), win_8(12), win_8(13)>
+  # draw_11 = PHI <draw_18(D)(2), draw_10(11), draw_10(12), draw_10(13)>
+  _5 = fgets (&buff, 4, f_15);
+  if (_5 != 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 15>; [INV]
+;;    succ:       3
+;;                15
+
+;;   basic block 15, loop depth 0
+;;    pred:       14
+  fclose (f_15);
+  printf ("%d\n", s_7);
+  _22 = 0;
+  buff ={v} {CLOBBER(eol)};
+;;    succ:       16
+
+;;   basic block 16, loop depth 0
+;;    pred:       15
+<L14>:
+  return _22;
+;;    succ:       EXIT
+
+}
+
+
+
+Partition map 
+
+Partition 1 (_1 - 1 )
+Partition 2 (_2 - 2 )
+Partition 3 (_3 - 3 )
+Partition 4 (_4 - 4 )
+Partition 5 (_5 - 5 )
+Partition 6 (s_6 - 6 )
+Partition 7 (s_7 - 7 )
+Partition 8 (win_8 - 8 )
+Partition 9 (win_9 - 9 )
+Partition 10 (draw_10 - 10 )
+Partition 11 (draw_11 - 11 )
+Partition 15 (f_15 - 15 )
+Partition 16 (s_16 - 16 )
+Partition 17 (win_17(D) - 17 )
+Partition 18 (draw_18(D) - 18 )
+Partition 22 (_22 - 22 )
+Partition 24 (win_24 - 24 )
+Partition 25 (draw_25 - 25 )
+Partition 26 (s_26 - 26 )
+Partition 27 (win_27 - 27 )
+Partition 28 (draw_28 - 28 )
+Partition 29 (s_29 - 29 )
+Partition 30 (win_30 - 30 )
+Partition 31 (draw_31 - 31 )
+Partition 32 (s_32 - 32 )
+Partition 33 (s_33 - 33 )
+Partition 34 (s_34 - 34 )
+Partition 35 (_35(D) - 35 )
+
+
+Coalescible Partition map 
+
+Partition 0, base 0 (s_6 - 6 7 16 26 29 32 33 34 )
+Partition 2, base 1 (win_8 - 8 9 17 24 27 30 )
+Partition 4, base 2 (draw_10 - 10 11 18 25 28 31 )
+Partition 20, base 3 (_35(D) - 35 )
+
+
+Partition map 
+
+Partition 0 (s_6 - 6 )
+Partition 1 (s_7 - 7 )
+Partition 2 (win_8 - 8 )
+Partition 3 (win_9 - 9 )
+Partition 4 (draw_10 - 10 )
+Partition 5 (draw_11 - 11 )
+Partition 6 (s_16 - 16 )
+Partition 7 (win_17(D) - 17 )
+Partition 8 (draw_18(D) - 18 )
+Partition 9 (win_24 - 24 )
+Partition 10 (draw_25 - 25 )
+Partition 11 (s_26 - 26 )
+Partition 12 (win_27 - 27 )
+Partition 13 (draw_28 - 28 )
+Partition 14 (s_29 - 29 )
+Partition 15 (win_30 - 30 )
+Partition 16 (draw_31 - 31 )
+Partition 17 (s_32 - 32 )
+Partition 18 (s_33 - 33 )
+Partition 19 (s_34 - 34 )
+Partition 20 (_35(D) - 35 )
+
+
+Conflict graph:
+
+After sorting:
+Sorted Coalesce list:
+(2147483646, 0) s_6 <-> s_7
+(2147483646, 0) s_6 <-> s_32
+(2147483646, 0) s_6 <-> s_29
+(2147483646, 0) s_6 <-> s_26
+(2147483646, 0) win_8 <-> win_9
+(2147483646, 0) win_8 <-> win_30
+(2147483646, 0) win_8 <-> win_27
+(2147483646, 0) win_8 <-> win_24
+(2147483646, 0) draw_10 <-> draw_11
+(2147483646, 0) draw_10 <-> draw_31
+(2147483646, 0) draw_10 <-> draw_28
+(2147483646, 0) draw_10 <-> draw_25
+(2147483646, 0) s_6 <-> s_16
+(2147483646, 0) win_8 <-> win_17(D)
+(2147483646, 0) draw_10 <-> draw_18(D)
+(2147483646, 0) s_6 <-> s_33
+(2147483646, 0) s_6 <-> s_34
+(10000, 0) s_7 <-> s_16
+(10000, 0) s_7 <-> s_34
+(10000, 0) s_7 <-> s_33
+(10000, 0) win_9 <-> win_17(D)
+(10000, 0) draw_11 <-> draw_18(D)
+
+Partition map 
+
+Partition 0 (s_6 - 6 )
+Partition 1 (s_7 - 7 )
+Partition 2 (win_8 - 8 )
+Partition 3 (win_9 - 9 )
+Partition 4 (draw_10 - 10 )
+Partition 5 (draw_11 - 11 )
+Partition 6 (s_16 - 16 )
+Partition 7 (win_17(D) - 17 )
+Partition 8 (draw_18(D) - 18 )
+Partition 9 (win_24 - 24 )
+Partition 10 (draw_25 - 25 )
+Partition 11 (s_26 - 26 )
+Partition 12 (win_27 - 27 )
+Partition 13 (draw_28 - 28 )
+Partition 14 (s_29 - 29 )
+Partition 15 (win_30 - 30 )
+Partition 16 (draw_31 - 31 )
+Partition 17 (s_32 - 32 )
+Partition 18 (s_33 - 33 )
+Partition 19 (s_34 - 34 )
+Partition 20 (_35(D) - 35 )
+
+Coalesce list: (6)s_6 & (7)s_7 [map: 0, 1] : Success -> 0
+Coalesce list: (6)s_6 & (32)s_32 [map: 0, 17] : Success -> 0
+Coalesce list: (6)s_6 & (29)s_29 [map: 0, 14] : Success -> 0
+Coalesce list: (6)s_6 & (26)s_26 [map: 0, 11] : Success -> 0
+Coalesce list: (8)win_8 & (9)win_9 [map: 2, 3] : Success -> 2
+Coalesce list: (8)win_8 & (30)win_30 [map: 2, 15] : Success -> 2
+Coalesce list: (8)win_8 & (27)win_27 [map: 2, 12] : Success -> 2
+Coalesce list: (8)win_8 & (24)win_24 [map: 2, 9] : Success -> 2
+Coalesce list: (10)draw_10 & (11)draw_11 [map: 4, 5] : Success -> 4
+Coalesce list: (10)draw_10 & (31)draw_31 [map: 4, 16] : Success -> 4
+Coalesce list: (10)draw_10 & (28)draw_28 [map: 4, 13] : Success -> 4
+Coalesce list: (10)draw_10 & (25)draw_25 [map: 4, 10] : Success -> 4
+Coalesce list: (6)s_6 & (16)s_16 [map: 0, 6] : Success -> 0
+Coalesce list: (8)win_8 & (17)win_17(D) [map: 2, 7] : Success -> 2
+Coalesce list: (10)draw_10 & (18)draw_18(D) [map: 4, 8] : Success -> 4
+Coalesce list: (6)s_6 & (33)s_33 [map: 0, 18] : Success -> 0
+Coalesce list: (6)s_6 & (34)s_34 [map: 0, 19] : Success -> 0
+Coalesce list: (7)s_6 & (16)s_6: Already Coalesced.
+Coalesce list: (7)s_6 & (34)s_6: Already Coalesced.
+Coalesce list: (7)s_6 & (33)s_6: Already Coalesced.
+Coalesce list: (9)win_8 & (17)win_8: Already Coalesced.
+Coalesce list: (11)draw_10 & (18)draw_10: Already Coalesced.
+After Coalescing:
+
+Partition map 
+
+Partition 0 (_1 - 1 )
+Partition 1 (_2 - 2 )
+Partition 2 (_3 - 3 )
+Partition 3 (_4 - 4 )
+Partition 4 (_5 - 5 )
+Partition 5 (s_6 - 6 7 16 26 29 32 33 34 )
+Partition 6 (win_8 - 8 9 17 24 27 30 )
+Partition 7 (draw_10 - 10 11 18 25 28 31 )
+Partition 8 (f_15 - 15 )
+Partition 9 (_22 - 22 )
+Partition 10 (_35(D) - 35 )
+
+int main ()
+{
+  char draw;
+  char win;
+  int s;
+  char buff[4];
+  struct FILE * f;
+  int D.2927;
+  char _1;
+  int _2;
+  char _3;
+  char _4;
+  char * _5;
+  int _22;
+  int _35(D);
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  f_15 = fopen ("input.txt", "r");
+  s_16 = 0;
+  goto <bb 14>; [INV]
+;;    succ:       14
+
+;;   basic block 3, loop depth 1
+;;    pred:       14
+  _1 = buff[2];
+  _2 = (int) _1;
+  if (_2 == 90)
+    goto <bb 9>; [INV]
+  else
+    goto <bb 4>; [INV]
+;;    succ:       4
+;;                9
+
+;;   basic block 4, loop depth 1
+;;    pred:       3
+  if (_2 > 90)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 5>; [INV]
+;;    succ:       5
+;;                10
+
+;;   basic block 5, loop depth 1
+;;    pred:       4
+  if (_2 == 88)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 6>; [INV]
+;;    succ:       6
+;;                7
+
+;;   basic block 6, loop depth 1
+;;    pred:       5
+  if (_2 == 89)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 10>; [INV]
+;;    succ:       10
+;;                8
+
+;;   basic block 7, loop depth 1
+;;    pred:       5
+  win_30 = 67;
+  draw_31 = 65;
+  s_32 = s_7 + 1;
+  goto <bb 10>; [INV]
+;;    succ:       10
+
+;;   basic block 8, loop depth 1
+;;    pred:       6
+  win_27 = 65;
+  draw_28 = 66;
+  s_29 = s_7 + 2;
+  goto <bb 10>; [INV]
+;;    succ:       10
+
+;;   basic block 9, loop depth 1
+;;    pred:       3
+  win_24 = 66;
+  draw_25 = 67;
+  s_26 = s_7 + 3;
+;;    succ:       10
+
+;;   basic block 10, loop depth 1
+;;    pred:       6
+;;                7
+;;                8
+;;                9
+;;                4
+  # s_6 = PHI <s_7(6), s_32(7), s_29(8), s_26(9), s_7(4)>
+  # win_8 = PHI <win_9(6), win_30(7), win_27(8), win_24(9), win_9(4)>
+  # draw_10 = PHI <draw_11(6), draw_31(7), draw_28(8), draw_25(9), draw_11(4)>
+  _3 = buff[0];
+  if (win_8 == _3)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 12>; [INV]
+;;    succ:       11
+;;                12
+
+;;   basic block 11, loop depth 1
+;;    pred:       10
+  s_34 = s_6 + 6;
+  goto <bb 14>; [INV]
+;;    succ:       14
+
+;;   basic block 12, loop depth 1
+;;    pred:       10
+  _4 = buff[0];
+  if (draw_10 == _4)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 14>; [INV]
+;;    succ:       13
+;;                14
+
+;;   basic block 13, loop depth 1
+;;    pred:       12
+  s_33 = s_6 + 3;
+;;    succ:       14
+
+;;   basic block 14, loop depth 1
+;;    pred:       2
+;;                11
+;;                12
+;;                13
+  # s_7 = PHI <s_16(2), s_34(11), s_6(12), s_33(13)>
+  # win_9 = PHI <win_17(D)(2), win_8(11), win_8(12), win_8(13)>
+  # draw_11 = PHI <draw_18(D)(2), draw_10(11), draw_10(12), draw_10(13)>
+  _5 = fgets (&buff, 4, f_15);
+  if (_5 != 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 15>; [INV]
+;;    succ:       3
+;;                15
+
+;;   basic block 15, loop depth 0
+;;    pred:       14
+  fclose (f_15);
+  printf ("%d\n", s_7);
+  _22 = 0;
+  buff ={v} {CLOBBER(eol)};
+;;    succ:       16
+
+;;   basic block 16, loop depth 0
+;;    pred:       15
+<L14>:
+  return _22;
+;;    succ:       EXIT
+
+}
+
+
+Partition 3: size 8 align 8
+	f_15
+Partition 4: size 4 align 1
+	buff
+Partition 0: size 4 align 4
+	s_6
+Partition 2: size 1 align 1
+	draw_10
+Partition 1: size 1 align 1
+	win_8
+
+;; Generating RTL for gimple basic block 2
+
+;; f_15 = fopen ("input.txt", "r");
+
+(insn 6 5 7 (set (reg:DI 89)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f3c895075a0 *.LC0>)) "day.c":6:6 -1
+     (nil))
+
+(insn 7 6 8 (set (reg:DI 4 si)
+        (reg:DI 89)) "day.c":6:6 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f3c895075a0 *.LC0>)
+        (nil)))
+
+(insn 8 7 9 (set (reg:DI 90)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f3c89507630 *.LC1>)) "day.c":6:6 -1
+     (nil))
+
+(insn 9 8 10 (set (reg:DI 5 di)
+        (reg:DI 90)) "day.c":6:6 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f3c89507630 *.LC1>)
+        (nil)))
+
+(call_insn 10 9 11 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7f3c89499700 fopen>) [0 fopen S1 A8])
+            (const_int 0 [0]))) "day.c":6:6 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+
+(insn 11 10 12 (set (reg/f:DI 91)
+        (reg:DI 0 ax)) "day.c":6:6 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 91)
+        (nil)))
+
+(insn 12 11 0 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 f+0 S8 A64])
+        (reg/f:DI 91)) "day.c":6:6 -1
+     (nil))
+
+;; s_16 = 0;
+
+(insn 13 12 0 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+        (const_int 0 [0])) "day.c":10:6 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 3
+
+;; _1 = buff[2];
+
+(insn 17 16 0 (set (reg:QI 82 [ _1 ])
+        (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -10 [0xfffffffffffffff6])) [0 buff[2]+0 S1 A16])) "day.c":13:14 -1
+     (nil))
+
+;; _2 = (int) _1;
+
+(insn 18 17 0 (set (reg:SI 83 [ _2 ])
+        (sign_extend:SI (reg:QI 82 [ _1 ]))) "day.c":13:14 -1
+     (nil))
+
+;; if (_2 == 90)
+
+(insn 19 18 20 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 83 [ _2 ])
+            (const_int 90 [0x5a]))) "day.c":13:3 -1
+     (nil))
+
+(jump_insn 20 19 0 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "day.c":13:3 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 4
+
+;; if (_2 > 90)
+
+(insn 24 21 25 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:SI 83 [ _2 ])
+            (const_int 90 [0x5a]))) "day.c":13:3 -1
+     (nil))
+
+(jump_insn 25 24 0 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "day.c":13:3 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 5
+
+;; if (_2 == 88)
+
+(insn 27 26 28 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 83 [ _2 ])
+            (const_int 88 [0x58]))) "day.c":13:3 -1
+     (nil))
+
+(jump_insn 28 27 0 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "day.c":13:3 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 6
+
+;; if (_2 == 89)
+
+(insn 30 29 31 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 83 [ _2 ])
+            (const_int 89 [0x59]))) "day.c":13:3 -1
+     (nil))
+
+(jump_insn 31 30 34 6 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "day.c":13:3 -1
+     (nil))
+
+(note 34 31 32 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+
+(jump_insn 32 34 33 18 (set (pc)
+        (label_ref 0)) "day.c":13:3 -1
+     (nil))
+
+(barrier 33 32 0)
+
+;; Generating RTL for gimple basic block 7
+
+;; 
+
+(code_label 35 33 36 5 (nil) [0 uses])
+
+(note 36 35 0 NOTE_INSN_BASIC_BLOCK)
+
+;; win_30 = 67;
+
+(insn 37 36 0 (set (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -30 [0xffffffffffffffe2])) [0 win+0 S1 A16])
+        (const_int 67 [0x43])) "day.c":15:9 -1
+     (nil))
+
+;; draw_31 = 65;
+
+(insn 38 37 0 (set (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -29 [0xffffffffffffffe3])) [0 draw+0 S1 A8])
+        (const_int 65 [0x41])) "day.c":16:10 -1
+     (nil))
+
+;; s_32 = s_7 + 1;
+
+(insn 39 38 0 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                            (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "day.c":17:7 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 8
+
+;; 
+
+(code_label 42 41 43 6 (nil) [0 uses])
+
+(note 43 42 0 NOTE_INSN_BASIC_BLOCK)
+
+;; win_27 = 65;
+
+(insn 44 43 0 (set (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -30 [0xffffffffffffffe2])) [0 win+0 S1 A16])
+        (const_int 65 [0x41])) "day.c":20:9 -1
+     (nil))
+
+;; draw_28 = 66;
+
+(insn 45 44 0 (set (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -29 [0xffffffffffffffe3])) [0 draw+0 S1 A8])
+        (const_int 66 [0x42])) "day.c":21:10 -1
+     (nil))
+
+;; s_29 = s_7 + 2;
+
+(insn 46 45 0 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                            (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "day.c":22:7 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 9
+
+;; 
+
+(code_label 49 48 50 3 (nil) [0 uses])
+
+(note 50 49 0 NOTE_INSN_BASIC_BLOCK)
+
+;; win_24 = 66;
+
+(insn 51 50 0 (set (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -30 [0xffffffffffffffe2])) [0 win+0 S1 A16])
+        (const_int 66 [0x42])) "day.c":25:9 -1
+     (nil))
+
+;; draw_25 = 67;
+
+(insn 52 51 0 (set (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -29 [0xffffffffffffffe3])) [0 draw+0 S1 A8])
+        (const_int 67 [0x43])) "day.c":26:10 -1
+     (nil))
+
+;; s_26 = s_7 + 3;
+
+(insn 53 52 0 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                            (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "day.c":27:7 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 10
+
+;; 
+
+(code_label 54 53 55 4 (nil) [0 uses])
+
+(note 55 54 0 NOTE_INSN_BASIC_BLOCK)
+
+;; _3 = buff[0];
+
+(insn 56 55 0 (set (reg:QI 84 [ _3 ])
+        (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [0 buff[0]+0 S1 A32])) "day.c":31:10 -1
+     (nil))
+
+;; if (win_8 == _3)
+
+(insn 57 56 58 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -30 [0xffffffffffffffe2])) [0 win+0 S1 A16])
+            (reg:QI 84 [ _3 ]))) "day.c":31:5 -1
+     (nil))
+
+(jump_insn 58 57 0 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "day.c":31:5 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 11
+
+;; s_34 = s_6 + 6;
+
+(insn 60 59 0 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                            (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                    (const_int 6 [0x6])))
+            (clobber (reg:CC 17 flags))
+        ]) "day.c":32:6 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 12
+
+;; 
+
+(code_label 63 62 64 7 (nil) [0 uses])
+
+(note 64 63 0 NOTE_INSN_BASIC_BLOCK)
+
+;; _4 = buff[0];
+
+(insn 65 64 0 (set (reg:QI 85 [ _4 ])
+        (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [0 buff[0]+0 S1 A32])) "day.c":33:18 -1
+     (nil))
+
+;; if (draw_10 == _4)
+
+(insn 66 65 67 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -29 [0xffffffffffffffe3])) [0 draw+0 S1 A8])
+            (reg:QI 85 [ _4 ]))) "day.c":33:13 -1
+     (nil))
+
+(jump_insn 67 66 0 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "day.c":33:13 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 13
+
+;; s_33 = s_6 + 3;
+
+(insn 69 68 0 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                            (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "day.c":34:6 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 14
+
+;; 
+
+(code_label 70 69 71 2 (nil) [0 uses])
+
+(note 71 70 0 NOTE_INSN_BASIC_BLOCK)
+
+;; _5 = fgets (&buff, 4, f_15);
+
+(insn 72 71 73 (set (reg:DI 92)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 f+0 S8 A64])) "day.c":11:8 -1
+     (nil))
+
+(insn 73 72 74 (parallel [
+            (set (reg:DI 93)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "day.c":11:8 -1
+     (nil))
+
+(insn 74 73 75 (set (reg:DI 1 dx)
+        (reg:DI 92)) "day.c":11:8 -1
+     (nil))
+
+(insn 75 74 76 (set (reg:SI 4 si)
+        (const_int 4 [0x4])) "day.c":11:8 -1
+     (nil))
+
+(insn 76 75 77 (set (reg:DI 5 di)
+        (reg:DI 93)) "day.c":11:8 -1
+     (nil))
+
+(call_insn 77 76 78 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fgets") [flags 0x41]  <function_decl 0x7f3c894ac400 fgets>) [0 fgets S1 A8])
+            (const_int 0 [0]))) "day.c":11:8 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+
+(insn 78 77 0 (set (reg/f:DI 86 [ _5 ])
+        (reg:DI 0 ax)) "day.c":11:8 -1
+     (nil))
+
+;; if (_5 != 0B)
+
+(insn 80 78 81 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 86 [ _5 ])
+            (const_int 0 [0]))) "day.c":11:37 -1
+     (nil))
+
+(jump_insn 81 80 0 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 79)
+            (pc))) "day.c":11:37 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 15
+
+;; fclose (f_15);
+
+(insn 83 82 84 (set (reg:DI 94)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 f+0 S8 A64])) "day.c":37:2 -1
+     (nil))
+
+(insn 84 83 85 (set (reg:DI 5 di)
+        (reg:DI 94)) "day.c":37:2 -1
+     (nil))
+
+(call_insn 85 84 0 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x7f3c89499000 fclose>) [0 fclose S1 A8])
+            (const_int 0 [0]))) "day.c":37:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+
+;; printf ("%d\n", s_7);
+
+(insn 86 85 87 (set (reg:SI 95)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])) "day.c":38:2 -1
+     (nil))
+
+(insn 87 86 88 (set (reg:SI 4 si)
+        (reg:SI 95)) "day.c":38:2 -1
+     (nil))
+
+(insn 88 87 89 (set (reg:DI 96)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f3c895076c0 *.LC2>)) "day.c":38:2 -1
+     (nil))
+
+(insn 89 88 90 (set (reg:DI 5 di)
+        (reg:DI 96)) "day.c":38:2 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f3c895076c0 *.LC2>)
+        (nil)))
+
+(insn 90 89 91 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "day.c":38:2 -1
+     (nil))
+
+(call_insn 91 90 0 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7f3c893d4000 printf>) [0 __builtin_printf S1 A8])
+            (const_int 0 [0]))) "day.c":38:2 -1
+     (nil)
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:SI (use (reg:SI 4 si))
+                (nil)))))
+
+;; _22 = 0;
+
+(insn 92 91 0 (set (reg:SI 87 [ _22 ])
+        (const_int 0 [0])) "day.c":40:9 -1
+     (nil))
+
+;; buff ={v} {CLOBBER(eol)};
+
+(nil)
+
+;; Generating RTL for gimple basic block 16
+
+;; <L14>:
+
+(code_label 93 92 94 9 (nil) [0 uses])
+
+(note 94 93 0 NOTE_INSN_BASIC_BLOCK)
+
+;; return _22;
+
+(insn 95 94 96 (set (reg:SI 88 [ <retval> ])
+        (reg:SI 87 [ _22 ])) "day.c":41:1 -1
+     (nil))
+
+(jump_insn 96 95 97 (set (pc)
+        (label_ref 0)) "day.c":41:1 -1
+     (nil))
+
+(barrier 97 96 0)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Forwarding edge 7->8 to 12 failed.
+Merging block 18 into block 17...
+Merged blocks 17 and 18.
+Merged 17 and 18 without moving.
+Removing jump 96.
+Merging block 19 into block 17...
+Merged blocks 17 and 19.
+Merged 17 and 19 without moving.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 7->8 to 12 failed.
+fix_loop_structure: fixing up loops for function
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 4 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 4, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 4 3 2 NOTE_INSN_FUNCTION_BEG)
+(insn 3 2 6 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [1 D.2931+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (const_int 40 [0x28]) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "day.c":4:12 -1
+     (nil))
+(insn 6 3 7 2 (set (reg:DI 89)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f3c895075a0 *.LC0>)) "day.c":6:6 -1
+     (nil))
+(insn 7 6 8 2 (set (reg:DI 4 si)
+        (reg:DI 89)) "day.c":6:6 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f3c895075a0 *.LC0>)
+        (nil)))
+(insn 8 7 9 2 (set (reg:DI 90)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f3c89507630 *.LC1>)) "day.c":6:6 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:DI 5 di)
+        (reg:DI 90)) "day.c":6:6 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f3c89507630 *.LC1>)
+        (nil)))
+(call_insn 10 9 11 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7f3c89499700 fopen>) [0 fopen S1 A8])
+            (const_int 0 [0]))) "day.c":6:6 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 11 10 12 2 (set (reg/f:DI 91)
+        (reg:DI 0 ax)) "day.c":6:6 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 91)
+        (nil)))
+(insn 12 11 13 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 f+0 S8 A64])
+        (reg/f:DI 91)) "day.c":6:6 -1
+     (nil))
+(insn 13 12 14 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+        (const_int 0 [0])) "day.c":10:6 -1
+     (nil))
+(jump_insn 14 13 15 2 (set (pc)
+        (label_ref 70)) "day.c":11:7 -1
+     (nil)
+ -> 70)
+;;  succ:       16 day.c:11:7
+
+(barrier 15 14 79)
+;; basic block 4, loop depth 1, maybe hot
+;;  prev block 2, next block 5, flags: (NEW, REACHABLE, RTL)
+;;  pred:       16
+(code_label 79 15 16 4 8 (nil) [1 uses])
+(note 16 79 17 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 18 4 (set (reg:QI 82 [ _1 ])
+        (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -10 [0xfffffffffffffff6])) [0 buff[2]+0 S1 A16])) "day.c":13:14 -1
+     (nil))
+(insn 18 17 19 4 (set (reg:SI 83 [ _2 ])
+        (sign_extend:SI (reg:QI 82 [ _1 ]))) "day.c":13:14 -1
+     (nil))
+(insn 19 18 20 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 83 [ _2 ])
+            (const_int 90 [0x5a]))) "day.c":13:3 -1
+     (nil))
+(jump_insn 20 19 21 4 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 49)
+            (pc))) "day.c":13:3 -1
+     (nil)
+ -> 49)
+;;  succ:       5 (FALLTHRU)
+;;              11
+
+;; basic block 5, loop depth 1, maybe hot
+;;  prev block 4, next block 6, flags: (NEW, REACHABLE, RTL)
+;;  pred:       4 (FALLTHRU)
+(note 21 20 24 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 24 21 25 5 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:SI 83 [ _2 ])
+            (const_int 90 [0x5a]))) "day.c":13:3 -1
+     (nil))
+(jump_insn 25 24 26 5 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 54)
+            (pc))) "day.c":13:3 -1
+     (nil)
+ -> 54)
+;;  succ:       6 (FALLTHRU)
+;;              12
+
+;; basic block 6, loop depth 1, maybe hot
+;;  prev block 5, next block 7, flags: (NEW, REACHABLE, RTL)
+;;  pred:       5 (FALLTHRU)
+(note 26 25 27 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 27 26 28 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 83 [ _2 ])
+            (const_int 88 [0x58]))) "day.c":13:3 -1
+     (nil))
+(jump_insn 28 27 29 6 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 35)
+            (pc))) "day.c":13:3 -1
+     (nil)
+ -> 35)
+;;  succ:       7 (FALLTHRU)
+;;              9
+
+;; basic block 7, loop depth 1, maybe hot
+;;  prev block 6, next block 8, flags: (NEW, REACHABLE, RTL)
+;;  pred:       6 (FALLTHRU)
+(note 29 28 30 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 83 [ _2 ])
+            (const_int 89 [0x59]))) "day.c":13:3 -1
+     (nil))
+(jump_insn 31 30 34 7 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 42)
+            (pc))) "day.c":13:3 -1
+     (nil)
+ -> 42)
+;;  succ:       8 (FALLTHRU) day.c:13:3
+;;              10
+
+;; basic block 8, loop depth 1, maybe hot
+;;  prev block 7, next block 9, flags: (NEW, REACHABLE, RTL)
+;;  pred:       7 (FALLTHRU) day.c:13:3
+(note 34 31 32 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 32 34 33 8 (set (pc)
+        (label_ref 54)) "day.c":13:3 -1
+     (nil)
+ -> 54)
+;;  succ:       12 [always] 
+
+(barrier 33 32 35)
+;; basic block 9, loop depth 1, maybe hot
+;;  prev block 8, next block 10, flags: (NEW, REACHABLE, RTL)
+;;  pred:       6
+(code_label 35 33 36 9 5 (nil) [1 uses])
+(note 36 35 37 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 37 36 38 9 (set (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -30 [0xffffffffffffffe2])) [0 win+0 S1 A16])
+        (const_int 67 [0x43])) "day.c":15:9 -1
+     (nil))
+(insn 38 37 39 9 (set (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -29 [0xffffffffffffffe3])) [0 draw+0 S1 A8])
+        (const_int 65 [0x41])) "day.c":16:10 -1
+     (nil))
+(insn 39 38 40 9 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                            (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "day.c":17:7 -1
+     (nil))
+(jump_insn 40 39 41 9 (set (pc)
+        (label_ref 54)) "day.c":18:5 -1
+     (nil)
+ -> 54)
+;;  succ:       12 day.c:18:5
+
+(barrier 41 40 42)
+;; basic block 10, loop depth 1, maybe hot
+;;  prev block 9, next block 11, flags: (NEW, REACHABLE, RTL)
+;;  pred:       7
+(code_label 42 41 43 10 6 (nil) [1 uses])
+(note 43 42 44 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 44 43 45 10 (set (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -30 [0xffffffffffffffe2])) [0 win+0 S1 A16])
+        (const_int 65 [0x41])) "day.c":20:9 -1
+     (nil))
+(insn 45 44 46 10 (set (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -29 [0xffffffffffffffe3])) [0 draw+0 S1 A8])
+        (const_int 66 [0x42])) "day.c":21:10 -1
+     (nil))
+(insn 46 45 47 10 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                            (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "day.c":22:7 -1
+     (nil))
+(jump_insn 47 46 48 10 (set (pc)
+        (label_ref 54)) "day.c":23:5 -1
+     (nil)
+ -> 54)
+;;  succ:       12 day.c:23:5
+
+(barrier 48 47 49)
+;; basic block 11, loop depth 1, maybe hot
+;;  prev block 10, next block 12, flags: (NEW, REACHABLE, RTL)
+;;  pred:       4
+(code_label 49 48 50 11 3 (nil) [1 uses])
+(note 50 49 51 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 51 50 52 11 (set (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -30 [0xffffffffffffffe2])) [0 win+0 S1 A16])
+        (const_int 66 [0x42])) "day.c":25:9 -1
+     (nil))
+(insn 52 51 53 11 (set (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -29 [0xffffffffffffffe3])) [0 draw+0 S1 A8])
+        (const_int 67 [0x43])) "day.c":26:10 -1
+     (nil))
+(insn 53 52 54 11 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                            (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "day.c":27:7 -1
+     (nil))
+;;  succ:       12 (FALLTHRU) day.c:28:5
+
+;; basic block 12, loop depth 1, maybe hot
+;;  prev block 11, next block 13, flags: (NEW, REACHABLE, RTL)
+;;  pred:       5
+;;              9 day.c:18:5
+;;              10 day.c:23:5
+;;              11 (FALLTHRU) day.c:28:5
+;;              8 [always] 
+(code_label 54 53 55 12 4 (nil) [4 uses])
+(note 55 54 56 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 56 55 57 12 (set (reg:QI 84 [ _3 ])
+        (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [0 buff[0]+0 S1 A32])) "day.c":31:10 -1
+     (nil))
+(insn 57 56 58 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -30 [0xffffffffffffffe2])) [0 win+0 S1 A16])
+            (reg:QI 84 [ _3 ]))) "day.c":31:5 -1
+     (nil))
+(jump_insn 58 57 59 12 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 63)
+            (pc))) "day.c":31:5 -1
+     (nil)
+ -> 63)
+;;  succ:       13 (FALLTHRU)
+;;              14
+
+;; basic block 13, loop depth 1, maybe hot
+;;  prev block 12, next block 14, flags: (NEW, REACHABLE, RTL)
+;;  pred:       12 (FALLTHRU)
+(note 59 58 60 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 60 59 61 13 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                            (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                    (const_int 6 [0x6])))
+            (clobber (reg:CC 17 flags))
+        ]) "day.c":32:6 -1
+     (nil))
+(jump_insn 61 60 62 13 (set (pc)
+        (label_ref 70)) -1
+     (nil)
+ -> 70)
+;;  succ:       16 (DFS_BACK)
+
+(barrier 62 61 63)
+;; basic block 14, loop depth 1, maybe hot
+;;  prev block 13, next block 15, flags: (NEW, REACHABLE, RTL)
+;;  pred:       12
+(code_label 63 62 64 14 7 (nil) [1 uses])
+(note 64 63 65 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 65 64 66 14 (set (reg:QI 85 [ _4 ])
+        (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [0 buff[0]+0 S1 A32])) "day.c":33:18 -1
+     (nil))
+(insn 66 65 67 14 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:QI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -29 [0xffffffffffffffe3])) [0 draw+0 S1 A8])
+            (reg:QI 85 [ _4 ]))) "day.c":33:13 -1
+     (nil))
+(jump_insn 67 66 68 14 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 70)
+            (pc))) "day.c":33:13 -1
+     (nil)
+ -> 70)
+;;  succ:       15 (FALLTHRU)
+;;              16 (DFS_BACK)
+
+;; basic block 15, loop depth 1, maybe hot
+;;  prev block 14, next block 16, flags: (NEW, REACHABLE, RTL)
+;;  pred:       14 (FALLTHRU)
+(note 68 67 69 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 69 68 70 15 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                            (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "day.c":34:6 -1
+     (nil))
+;;  succ:       16 (FALLTHRU,DFS_BACK)
+
+;; basic block 16, loop depth 1, maybe hot
+;;  prev block 15, next block 17, flags: (NEW, REACHABLE, RTL)
+;;  pred:       2 day.c:11:7
+;;              13 (DFS_BACK)
+;;              14 (DFS_BACK)
+;;              15 (FALLTHRU,DFS_BACK)
+(code_label 70 69 71 16 2 (nil) [3 uses])
+(note 71 70 72 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 72 71 73 16 (set (reg:DI 92)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 f+0 S8 A64])) "day.c":11:8 -1
+     (nil))
+(insn 73 72 74 16 (parallel [
+            (set (reg:DI 93)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "day.c":11:8 -1
+     (nil))
+(insn 74 73 75 16 (set (reg:DI 1 dx)
+        (reg:DI 92)) "day.c":11:8 -1
+     (nil))
+(insn 75 74 76 16 (set (reg:SI 4 si)
+        (const_int 4 [0x4])) "day.c":11:8 -1
+     (nil))
+(insn 76 75 77 16 (set (reg:DI 5 di)
+        (reg:DI 93)) "day.c":11:8 -1
+     (nil))
+(call_insn 77 76 78 16 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fgets") [flags 0x41]  <function_decl 0x7f3c894ac400 fgets>) [0 fgets S1 A8])
+            (const_int 0 [0]))) "day.c":11:8 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 78 77 80 16 (set (reg/f:DI 86 [ _5 ])
+        (reg:DI 0 ax)) "day.c":11:8 -1
+     (nil))
+(insn 80 78 81 16 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 86 [ _5 ])
+            (const_int 0 [0]))) "day.c":11:37 -1
+     (nil))
+(jump_insn 81 80 82 16 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 79)
+            (pc))) "day.c":11:37 -1
+     (nil)
+ -> 79)
+;;  succ:       4
+;;              17 (FALLTHRU)
+
+;; basic block 17, loop depth 0, maybe hot
+;;  prev block 16, next block 20, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       16 (FALLTHRU)
+(note 82 81 83 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 83 82 84 17 (set (reg:DI 94)
+        (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 f+0 S8 A64])) "day.c":37:2 -1
+     (nil))
+(insn 84 83 85 17 (set (reg:DI 5 di)
+        (reg:DI 94)) "day.c":37:2 -1
+     (nil))
+(call_insn 85 84 86 17 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x7f3c89499000 fclose>) [0 fclose S1 A8])
+            (const_int 0 [0]))) "day.c":37:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 86 85 87 17 (set (reg:SI 95)
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])) "day.c":38:2 -1
+     (nil))
+(insn 87 86 88 17 (set (reg:SI 4 si)
+        (reg:SI 95)) "day.c":38:2 -1
+     (nil))
+(insn 88 87 89 17 (set (reg:DI 96)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f3c895076c0 *.LC2>)) "day.c":38:2 -1
+     (nil))
+(insn 89 88 90 17 (set (reg:DI 5 di)
+        (reg:DI 96)) "day.c":38:2 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f3c895076c0 *.LC2>)
+        (nil)))
+(insn 90 89 91 17 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "day.c":38:2 -1
+     (nil))
+(call_insn 91 90 92 17 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7f3c893d4000 printf>) [0 __builtin_printf S1 A8])
+            (const_int 0 [0]))) "day.c":38:2 -1
+     (nil)
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:SI (use (reg:SI 4 si))
+                (nil)))))
+(insn 92 91 95 17 (set (reg:SI 87 [ _22 ])
+        (const_int 0 [0])) "day.c":40:9 -1
+     (nil))
+(insn 95 92 99 17 (set (reg:SI 88 [ <retval> ])
+        (reg:SI 87 [ _22 ])) "day.c":41:1 -1
+     (nil))
+(insn 99 95 100 17 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [1 D.2931+0 S8 A64])
+                        (mem/v/f:DI (const_int 40 [0x28]) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "day.c":41:1 -1
+     (nil))
+(jump_insn 100 99 107 17 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 103)
+            (pc))) "day.c":41:1 -1
+     (nil)
+ -> 103)
+;;  succ:       21
+;;              20 (FALLTHRU)
+
+;; basic block 20, loop depth 0, maybe hot
+;;  prev block 17, next block 21, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       17 (FALLTHRU)
+(note 107 100 101 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(call_insn 101 107 102 20 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f3c8950de00 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "day.c":41:1 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (expr_list:REG_NORETURN (const_int 0 [0])
+            (expr_list:REG_EH_REGION (const_int 0 [0])
+                (nil))))
+    (nil))
+;;  succ:      
+
+(barrier 102 101 103)
+;; basic block 21, loop depth 0, maybe hot
+;;  prev block 20, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       17
+(code_label 103 102 108 21 10 (nil) [1 uses])
+(note 108 103 104 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 104 108 105 21 (set (reg/i:SI 0 ax)
+        (reg:SI 88 [ <retval> ])) "day.c":41:1 -1
+     (nil))
+(insn 105 104 0 21 (use (reg/i:SI 0 ax)) "day.c":41:1 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+

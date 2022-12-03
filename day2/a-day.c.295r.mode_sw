@@ -1,0 +1,527 @@
+
+;; Function main (main, funcdef_no=6, decl_uid=2906, cgraph_uid=7, symbol_order=6)
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+
+
+main
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 44 [xmm8] 45 [xmm9] 46 [xmm10] 47 [xmm11] 48 [xmm12] 49 [xmm13] 50 [xmm14] 51 [xmm15] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	
+;;  regular block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 19 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 6 [bp] 7 [sp] 16 [argp] 19 [frame] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 26 [xmm6] 27 [xmm7] 36 [r8] 37 [r9]
+;;  exit block uses 	 0 [ax] 6 [bp] 7 [sp] 19 [frame]
+;;  regs ever live 	 0 [ax] 1 [dx] 4 [si] 5 [di] 7 [sp] 17 [flags]
+;;  ref usage 	r0={8d,5u} r1={7d,1u} r2={6d} r4={9d,3u} r5={10d,4u} r6={1d,19u} r7={1d,24u} r8={5d} r9={5d} r10={5d} r11={5d} r12={5d} r13={5d} r14={5d} r15={5d} r16={1d,18u} r17={20d,8u} r18={5d} r19={1d,48u} r20={6d} r21={6d} r22={6d} r23={6d} r24={6d} r25={6d} r26={6d} r27={6d} r28={5d} r29={5d} r30={5d} r31={5d} r32={5d} r33={5d} r34={5d} r35={5d} r36={6d} r37={6d} r38={5d} r39={5d} r44={5d} r45={5d} r46={5d} r47={5d} r48={5d} r49={5d} r50={5d} r51={5d} r52={5d} r53={5d} r54={5d} r55={5d} r56={5d} r57={5d} r58={5d} r59={5d} r60={5d} r61={5d} r62={5d} r63={5d} r64={5d} r65={5d} r66={5d} r67={5d} r68={5d} r69={5d} r70={5d} r71={5d} r72={5d} r73={5d} r74={5d} r75={5d} r82={1d,1u} r83={1d,4u} r84={1d,1u} r85={1d,1u} r86={1d,1u} r87={1d,1u} r88={1d,1u} r89={1d,1u} r90={1d,1u} r91={1d,1u} r92={1d,1u} r93={1d,1u} r94={1d,1u} r95={1d,1u} r96={1d,1u} 
+;;    total ref usage 542{394d,148u,0e} in 67{62 regular + 5 call} insns.
+(note 1 0 4 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(6){ }u-1(7){ }u-1(16){ }u-1(19){ }}
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 4 3 2 NOTE_INSN_FUNCTION_BEG)
+(insn 3 2 6 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                        (const_int -8 [0xfffffffffffffff8])) [1 D.2931+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (const_int 40 [0x28]) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "day.c":4:12 1265 {stack_protect_set_1_di}
+     (nil))
+(insn 6 3 7 2 (set (reg:DI 89)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f3c895075a0 *.LC0>)) "day.c":6:6 80 {*movdi_internal}
+     (nil))
+(insn 7 6 8 2 (set (reg:DI 4 si)
+        (reg:DI 89)) "day.c":6:6 80 {*movdi_internal}
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f3c895075a0 *.LC0>)
+        (nil)))
+(insn 8 7 9 2 (set (reg:DI 90)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f3c89507630 *.LC1>)) "day.c":6:6 80 {*movdi_internal}
+     (nil))
+(insn 9 8 10 2 (set (reg:DI 5 di)
+        (reg:DI 90)) "day.c":6:6 80 {*movdi_internal}
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f3c89507630 *.LC1>)
+        (nil)))
+(call_insn 10 9 11 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x7f3c89499700 fopen>) [0 fopen S1 A8])
+            (const_int 0 [0]))) "day.c":6:6 909 {*call_value}
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 11 10 12 2 (set (reg/f:DI 91)
+        (reg:DI 0 ax)) "day.c":6:6 80 {*movdi_internal}
+     (expr_list:REG_NOALIAS (reg/f:DI 91)
+        (nil)))
+(insn 12 11 13 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -24 [0xffffffffffffffe8])) [2 f+0 S8 A64])
+        (reg/f:DI 91)) "day.c":6:6 80 {*movdi_internal}
+     (nil))
+(insn 13 12 109 2 (set (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+        (const_int 0 [0])) "day.c":10:6 81 {*movsi_internal}
+     (nil))
+(jump_insn 109 13 110 2 (set (pc)
+        (label_ref 70)) "day.c":11:7 -1
+     (nil)
+ -> 70)
+;;  succ:       15 [always]  day.c:11:7
+
+(barrier 110 109 79)
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 4, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       15
+;; bb 3 artificial_defs: { }
+;; bb 3 artificial_uses: { u-1(6){ }u-1(7){ }u-1(16){ }u-1(19){ }}
+(code_label 79 110 16 3 8 (nil) [1 uses])
+(note 16 79 17 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 18 3 (set (reg:QI 82 [ _1 ])
+        (mem/c:QI (plus:DI (reg/f:DI 19 frame)
+                (const_int -10 [0xfffffffffffffff6])) [0 buff[2]+0 S1 A16])) "day.c":13:14 83 {*movqi_internal}
+     (nil))
+(insn 18 17 19 3 (set (reg:SI 83 [ _2 ])
+        (sign_extend:SI (reg:QI 82 [ _1 ]))) "day.c":13:14 160 {extendqisi2}
+     (nil))
+(insn 19 18 20 3 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 83 [ _2 ])
+            (const_int 90 [0x5a]))) "day.c":13:3 11 {*cmpsi_1}
+     (nil))
+(jump_insn 20 19 21 3 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 49)
+            (pc))) "day.c":13:3 891 {*jcc}
+     (nil)
+ -> 49)
+;;  succ:       4 (FALLTHRU)
+;;              10
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 3, next block 5, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       3 (FALLTHRU)
+;; bb 4 artificial_defs: { }
+;; bb 4 artificial_uses: { u-1(6){ }u-1(7){ }u-1(16){ }u-1(19){ }}
+(note 21 20 24 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 24 21 25 4 (set (reg:CCGC 17 flags)
+        (compare:CCGC (reg:SI 83 [ _2 ])
+            (const_int 90 [0x5a]))) "day.c":13:3 11 {*cmpsi_1}
+     (nil))
+(jump_insn 25 24 26 4 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 54)
+            (pc))) "day.c":13:3 891 {*jcc}
+     (nil)
+ -> 54)
+;;  succ:       5 (FALLTHRU)
+;;              11
+
+;; basic block 5, loop depth 0, maybe hot
+;;  prev block 4, next block 6, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       4 (FALLTHRU)
+;; bb 5 artificial_defs: { }
+;; bb 5 artificial_uses: { u-1(6){ }u-1(7){ }u-1(16){ }u-1(19){ }}
+(note 26 25 27 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 27 26 28 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 83 [ _2 ])
+            (const_int 88 [0x58]))) "day.c":13:3 11 {*cmpsi_1}
+     (nil))
+(jump_insn 28 27 29 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 35)
+            (pc))) "day.c":13:3 891 {*jcc}
+     (nil)
+ -> 35)
+;;  succ:       6 (FALLTHRU)
+;;              8
+
+;; basic block 6, loop depth 0, maybe hot
+;;  prev block 5, next block 7, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       5 (FALLTHRU)
+;; bb 6 artificial_defs: { }
+;; bb 6 artificial_uses: { u-1(6){ }u-1(7){ }u-1(16){ }u-1(19){ }}
+(note 29 28 30 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 83 [ _2 ])
+            (const_int 89 [0x59]))) "day.c":13:3 11 {*cmpsi_1}
+     (nil))
+(jump_insn 31 30 111 6 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 42)
+            (pc))) "day.c":13:3 891 {*jcc}
+     (nil)
+ -> 42)
+;;  succ:       7 (FALLTHRU)
+;;              9
+
+;; basic block 7, loop depth 0, maybe hot
+;;  prev block 6, next block 8, flags: (NEW, RTL, MODIFIED)
+;;  pred:       6 (FALLTHRU)
+;; bb 7 artificial_defs: { }
+;; bb 7 artificial_uses: { u-1(6){ }u-1(7){ }u-1(16){ }u-1(19){ }}
+(note 111 31 112 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 112 111 113 7 (set (pc)
+        (label_ref 54)) "day.c":13:3 -1
+     (nil)
+ -> 54)
+;;  succ:       11 [always]  day.c:13:3
+
+(barrier 113 112 35)
+;; basic block 8, loop depth 0, maybe hot
+;;  prev block 7, next block 9, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       5
+;; bb 8 artificial_defs: { }
+;; bb 8 artificial_uses: { u-1(6){ }u-1(7){ }u-1(16){ }u-1(19){ }}
+(code_label 35 113 36 8 5 (nil) [1 uses])
+(note 36 35 37 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 37 36 38 8 (set (mem/c:QI (plus:DI (reg/f:DI 19 frame)
+                (const_int -30 [0xffffffffffffffe2])) [0 win+0 S1 A16])
+        (const_int 67 [0x43])) "day.c":15:9 83 {*movqi_internal}
+     (nil))
+(insn 38 37 39 8 (set (mem/c:QI (plus:DI (reg/f:DI 19 frame)
+                (const_int -29 [0xffffffffffffffe3])) [0 draw+0 S1 A8])
+        (const_int 65 [0x41])) "day.c":16:10 83 {*movqi_internal}
+     (nil))
+(insn 39 38 114 8 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                        (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                            (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "day.c":17:7 229 {*addsi_1}
+     (nil))
+(jump_insn 114 39 115 8 (set (pc)
+        (label_ref 54)) "day.c":18:5 -1
+     (nil)
+ -> 54)
+;;  succ:       11 [always]  day.c:18:5
+
+(barrier 115 114 42)
+;; basic block 9, loop depth 0, maybe hot
+;;  prev block 8, next block 10, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       6
+;; bb 9 artificial_defs: { }
+;; bb 9 artificial_uses: { u-1(6){ }u-1(7){ }u-1(16){ }u-1(19){ }}
+(code_label 42 115 43 9 6 (nil) [1 uses])
+(note 43 42 44 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 44 43 45 9 (set (mem/c:QI (plus:DI (reg/f:DI 19 frame)
+                (const_int -30 [0xffffffffffffffe2])) [0 win+0 S1 A16])
+        (const_int 65 [0x41])) "day.c":20:9 83 {*movqi_internal}
+     (nil))
+(insn 45 44 46 9 (set (mem/c:QI (plus:DI (reg/f:DI 19 frame)
+                (const_int -29 [0xffffffffffffffe3])) [0 draw+0 S1 A8])
+        (const_int 66 [0x42])) "day.c":21:10 83 {*movqi_internal}
+     (nil))
+(insn 46 45 116 9 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                        (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                            (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "day.c":22:7 229 {*addsi_1}
+     (nil))
+(jump_insn 116 46 117 9 (set (pc)
+        (label_ref 54)) "day.c":23:5 -1
+     (nil)
+ -> 54)
+;;  succ:       11 [always]  day.c:23:5
+
+(barrier 117 116 49)
+;; basic block 10, loop depth 0, maybe hot
+;;  prev block 9, next block 19, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       3
+;; bb 10 artificial_defs: { }
+;; bb 10 artificial_uses: { u-1(6){ }u-1(7){ }u-1(16){ }u-1(19){ }}
+(code_label 49 117 50 10 3 (nil) [1 uses])
+(note 50 49 51 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 51 50 52 10 (set (mem/c:QI (plus:DI (reg/f:DI 19 frame)
+                (const_int -30 [0xffffffffffffffe2])) [0 win+0 S1 A16])
+        (const_int 66 [0x42])) "day.c":25:9 83 {*movqi_internal}
+     (nil))
+(insn 52 51 53 10 (set (mem/c:QI (plus:DI (reg/f:DI 19 frame)
+                (const_int -29 [0xffffffffffffffe3])) [0 draw+0 S1 A8])
+        (const_int 67 [0x43])) "day.c":26:10 83 {*movqi_internal}
+     (nil))
+(insn 53 52 120 10 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                        (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                            (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "day.c":27:7 229 {*addsi_1}
+     (nil))
+;;  succ:       19 (FALLTHRU) day.c:28:5
+
+;; basic block 19, loop depth 0, maybe hot
+;;  prev block 10, next block 11, flags: (NEW, RTL, MODIFIED)
+;;  pred:       10 (FALLTHRU) day.c:28:5
+;; bb 19 artificial_defs: { }
+;; bb 19 artificial_uses: { u-1(6){ }u-1(7){ }u-1(16){ }u-1(19){ }}
+(note 120 53 121 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 121 120 54 19 (const_int 0 [0]) "day.c":28:5 -1
+     (nil))
+;;  succ:       11 [always]  (FALLTHRU)
+
+;; basic block 11, loop depth 0, maybe hot
+;;  prev block 19, next block 12, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       4
+;;              7 [always]  day.c:13:3
+;;              8 [always]  day.c:18:5
+;;              19 [always]  (FALLTHRU)
+;;              9 [always]  day.c:23:5
+;; bb 11 artificial_defs: { }
+;; bb 11 artificial_uses: { u-1(6){ }u-1(7){ }u-1(16){ }u-1(19){ }}
+(code_label 54 121 55 11 4 (nil) [4 uses])
+(note 55 54 56 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 56 55 57 11 (set (reg:QI 84 [ _3 ])
+        (mem/c:QI (plus:DI (reg/f:DI 19 frame)
+                (const_int -12 [0xfffffffffffffff4])) [0 buff[0]+0 S1 A32])) "day.c":31:10 83 {*movqi_internal}
+     (nil))
+(insn 57 56 58 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:QI (plus:DI (reg/f:DI 19 frame)
+                    (const_int -30 [0xffffffffffffffe2])) [0 win+0 S1 A16])
+            (reg:QI 84 [ _3 ]))) "day.c":31:5 9 {*cmpqi_1}
+     (nil))
+(jump_insn 58 57 59 11 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 63)
+            (pc))) "day.c":31:5 891 {*jcc}
+     (nil)
+ -> 63)
+;;  succ:       12 (FALLTHRU)
+;;              13
+
+;; basic block 12, loop depth 0, maybe hot
+;;  prev block 11, next block 13, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       11 (FALLTHRU)
+;; bb 12 artificial_defs: { }
+;; bb 12 artificial_uses: { u-1(6){ }u-1(7){ }u-1(16){ }u-1(19){ }}
+(note 59 58 60 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 60 59 118 12 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                        (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                            (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                    (const_int 6 [0x6])))
+            (clobber (reg:CC 17 flags))
+        ]) "day.c":32:6 229 {*addsi_1}
+     (nil))
+(jump_insn 118 60 119 12 (set (pc)
+        (label_ref 70)) -1
+     (nil)
+ -> 70)
+;;  succ:       15 [always] 
+
+(barrier 119 118 63)
+;; basic block 13, loop depth 0, maybe hot
+;;  prev block 12, next block 14, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       11
+;; bb 13 artificial_defs: { }
+;; bb 13 artificial_uses: { u-1(6){ }u-1(7){ }u-1(16){ }u-1(19){ }}
+(code_label 63 119 64 13 7 (nil) [1 uses])
+(note 64 63 65 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 65 64 66 13 (set (reg:QI 85 [ _4 ])
+        (mem/c:QI (plus:DI (reg/f:DI 19 frame)
+                (const_int -12 [0xfffffffffffffff4])) [0 buff[0]+0 S1 A32])) "day.c":33:18 83 {*movqi_internal}
+     (nil))
+(insn 66 65 67 13 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:QI (plus:DI (reg/f:DI 19 frame)
+                    (const_int -29 [0xffffffffffffffe3])) [0 draw+0 S1 A8])
+            (reg:QI 85 [ _4 ]))) "day.c":33:13 9 {*cmpqi_1}
+     (nil))
+(jump_insn 67 66 68 13 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 70)
+            (pc))) "day.c":33:13 891 {*jcc}
+     (nil)
+ -> 70)
+;;  succ:       14 (FALLTHRU)
+;;              15 (DFS_BACK)
+
+;; basic block 14, loop depth 0, maybe hot
+;;  prev block 13, next block 15, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       13 (FALLTHRU)
+;; bb 14 artificial_defs: { }
+;; bb 14 artificial_uses: { u-1(6){ }u-1(7){ }u-1(16){ }u-1(19){ }}
+(note 68 67 69 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 69 68 70 14 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                        (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                            (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "day.c":34:6 229 {*addsi_1}
+     (nil))
+;;  succ:       15 (FALLTHRU,DFS_BACK)
+
+;; basic block 15, loop depth 0, maybe hot
+;;  prev block 14, next block 16, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       14 (FALLTHRU,DFS_BACK)
+;;              2 [always]  day.c:11:7
+;;              13 (DFS_BACK)
+;;              12 [always] 
+;; bb 15 artificial_defs: { }
+;; bb 15 artificial_uses: { u-1(6){ }u-1(7){ }u-1(16){ }u-1(19){ }}
+(code_label 70 69 71 15 2 (nil) [3 uses])
+(note 71 70 72 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 72 71 73 15 (set (reg:DI 92)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -24 [0xffffffffffffffe8])) [2 f+0 S8 A64])) "day.c":11:8 80 {*movdi_internal}
+     (nil))
+(insn 73 72 74 15 (parallel [
+            (set (reg:DI 93)
+                (plus:DI (reg/f:DI 19 frame)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "day.c":11:8 230 {*adddi_1}
+     (nil))
+(insn 74 73 75 15 (set (reg:DI 1 dx)
+        (reg:DI 92)) "day.c":11:8 80 {*movdi_internal}
+     (nil))
+(insn 75 74 76 15 (set (reg:SI 4 si)
+        (const_int 4 [0x4])) "day.c":11:8 81 {*movsi_internal}
+     (nil))
+(insn 76 75 77 15 (set (reg:DI 5 di)
+        (reg:DI 93)) "day.c":11:8 80 {*movdi_internal}
+     (nil))
+(call_insn 77 76 78 15 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fgets") [flags 0x41]  <function_decl 0x7f3c894ac400 fgets>) [0 fgets S1 A8])
+            (const_int 0 [0]))) "day.c":11:8 909 {*call_value}
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 78 77 80 15 (set (reg/f:DI 86 [ _5 ])
+        (reg:DI 0 ax)) "day.c":11:8 80 {*movdi_internal}
+     (nil))
+(insn 80 78 81 15 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 86 [ _5 ])
+            (const_int 0 [0]))) "day.c":11:37 8 {*cmpdi_ccno_1}
+     (nil))
+(jump_insn 81 80 82 15 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 79)
+            (pc))) "day.c":11:37 891 {*jcc}
+     (nil)
+ -> 79)
+;;  succ:       3
+;;              16 (FALLTHRU)
+
+;; basic block 16, loop depth 0, maybe hot
+;;  prev block 15, next block 17, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       15 (FALLTHRU)
+;; bb 16 artificial_defs: { }
+;; bb 16 artificial_uses: { u-1(6){ }u-1(7){ }u-1(16){ }u-1(19){ }}
+(note 82 81 83 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 83 82 84 16 (set (reg:DI 94)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -24 [0xffffffffffffffe8])) [2 f+0 S8 A64])) "day.c":37:2 80 {*movdi_internal}
+     (nil))
+(insn 84 83 85 16 (set (reg:DI 5 di)
+        (reg:DI 94)) "day.c":37:2 80 {*movdi_internal}
+     (nil))
+(call_insn 85 84 86 16 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x7f3c89499000 fclose>) [0 fclose S1 A8])
+            (const_int 0 [0]))) "day.c":37:2 909 {*call_value}
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 86 85 87 16 (set (reg:SI 95)
+        (mem/c:SI (plus:DI (reg/f:DI 19 frame)
+                (const_int -28 [0xffffffffffffffe4])) [3 s+0 S4 A32])) "day.c":38:2 81 {*movsi_internal}
+     (nil))
+(insn 87 86 88 16 (set (reg:SI 4 si)
+        (reg:SI 95)) "day.c":38:2 81 {*movsi_internal}
+     (nil))
+(insn 88 87 89 16 (set (reg:DI 96)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f3c895076c0 *.LC2>)) "day.c":38:2 80 {*movdi_internal}
+     (nil))
+(insn 89 88 90 16 (set (reg:DI 5 di)
+        (reg:DI 96)) "day.c":38:2 80 {*movdi_internal}
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f3c895076c0 *.LC2>)
+        (nil)))
+(insn 90 89 91 16 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "day.c":38:2 83 {*movqi_internal}
+     (nil))
+(call_insn 91 90 92 16 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7f3c893d4000 printf>) [0 __builtin_printf S1 A8])
+            (const_int 0 [0]))) "day.c":38:2 909 {*call_value}
+     (nil)
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:SI (use (reg:SI 4 si))
+                (nil)))))
+(insn 92 91 95 16 (set (reg:SI 87 [ _22 ])
+        (const_int 0 [0])) "day.c":40:9 81 {*movsi_internal}
+     (nil))
+(insn 95 92 99 16 (set (reg:SI 88 [ <retval> ])
+        (reg:SI 87 [ _22 ])) "day.c":41:1 81 {*movsi_internal}
+     (nil))
+(insn 99 95 100 16 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                                (const_int -8 [0xfffffffffffffff8])) [1 D.2931+0 S8 A64])
+                        (mem/v/f:DI (const_int 40 [0x28]) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "day.c":41:1 1270 {stack_protect_test_1_di}
+     (nil))
+(jump_insn 100 99 107 16 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 103)
+            (pc))) "day.c":41:1 891 {*jcc}
+     (nil)
+ -> 103)
+;;  succ:       18
+;;              17 (FALLTHRU)
+
+;; basic block 17, loop depth 0, maybe hot
+;;  prev block 16, next block 18, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       16 (FALLTHRU)
+;; bb 17 artificial_defs: { }
+;; bb 17 artificial_uses: { u-1(6){ }u-1(7){ }u-1(16){ }u-1(19){ }}
+(note 107 100 101 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(call_insn 101 107 102 17 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f3c8950de00 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "day.c":41:1 898 {*call}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (expr_list:REG_NORETURN (const_int 0 [0])
+            (expr_list:REG_EH_REGION (const_int 0 [0])
+                (nil))))
+    (nil))
+;;  succ:      
+
+(barrier 102 101 103)
+;; basic block 18, loop depth 0, maybe hot
+;;  prev block 17, next block 1, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       16
+;; bb 18 artificial_defs: { }
+;; bb 18 artificial_uses: { u-1(6){ }u-1(7){ }u-1(16){ }u-1(19){ }}
+(code_label 103 102 108 18 10 (nil) [1 uses])
+(note 108 103 104 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 104 108 105 18 (set (reg/i:SI 0 ax)
+        (reg:SI 88 [ <retval> ])) "day.c":41:1 81 {*movsi_internal}
+     (nil))
+(insn 105 104 0 18 (use (reg/i:SI 0 ax)) "day.c":41:1 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+
